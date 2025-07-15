@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inoccard.github.io/sitemap.xml
+
+# Disallow certain file types
+Disallow: /*.scss
+Disallow: /*.map
+Disallow: /*.json
+Disallow: /*.md
+Disallow: /.git*
+Disallow: /node_modules/
+Disallow: /vendor/
