@@ -44,7 +44,7 @@ body {
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: var(--shadow-light);
-    transition: all 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .nav-container {
@@ -764,8 +764,16 @@ body.dark-mode {
     --shadow-heavy: 0 10px 15px rgba(255, 255, 255, 0.1);
 }
 
-body.dark-mode .navbar {
-    background: rgba(31, 41, 55, 0.95);
+/* Navbar dark mode - Multiple selectors for better specificity */
+body.dark-mode .navbar,
+.dark-mode .navbar {
+    background: rgba(31, 41, 55, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .navbar .nav-container {
+    background: transparent;
 }
 
 body.dark-mode .hero {
